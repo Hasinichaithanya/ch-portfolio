@@ -18,6 +18,7 @@ const AboutMe = () => {
     >
       <Box className="aboutme-text">
         <Typography
+          // wrap
           variant="h4"
           component="h3"
           marginBottom="20px"

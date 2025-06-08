@@ -3,9 +3,9 @@ import { Card, Box, Typography } from "@mui/material";
 import Heading from "../heading";
 import { motion } from "framer-motion";
 import "./projects.css";
-import ReactCarousel, { AFTER, CENTER, BEFORE } from "react-carousel-animated";
-import "react-carousel-animated/dist/style.css";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const projects = [
   {
     name: "Chef Freelancing Platform",
@@ -38,6 +38,33 @@ const projects = [
 ];
 
 const Projects = () => {
+  const settings = {
+    className: "center",
+    centerMode: true,
+    centerPadding: "40px",
+    slidesToShow: 3,
+    infinite: true,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 2,
+          // centerMode: true,
+          centerPadding: "30px",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          // centerMode: false, // DISABLE center mode for mobile
+          // centerPadding: "0px",
+        },
+      },
+    ],
+  };
+
   return (
     <motion.div
       id="projects"
@@ -45,31 +72,10 @@ const Projects = () => {
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1 }}
       viewport={{ amount: 0.3 }}
-      className="marginTop aboutme skills-container"
+      className="marginTop aboutme skills-container "
     >
       <Heading heading="Projects" />
-      <ReactCarousel
-        carouselConfig={{
-          transform: {
-            rotateY: {
-              [BEFORE]: () => "rotateY(25deg)",
-              [CENTER]: () => "rotateY(0deg)",
-              [AFTER]: () => "rotateY(-25deg)",
-            },
-          },
-        }}
-        itemBackgroundStyle={{
-          backgroundColor: "rgba(21, 198, 247, 0.1)",
-          borderRadius: "10px",
-          boxShadow: "8px 12px 14px -6px black",
-        }}
-        containerBackgroundStyle={{
-          filter: "blur(7px)",
-          // backgroundColor: "#0d2d35",
-        }}
-        itemMaxWidth={50}
-        carouselHeight="450px"
-      >
+      <Slider {...settings} className="projects-box">
         {projects.map((project, index) => (
           <Box className="project-card" key={index}>
             <img
@@ -92,7 +98,7 @@ const Projects = () => {
             </Box>
           </Box>
         ))}
-      </ReactCarousel>
+      </Slider>
     </motion.div>
   );
 };
