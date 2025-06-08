@@ -1,0 +1,50 @@
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepper-container {
+  width: 70%;
+}
+.step {
+  background-color: rgba(21, 198, 247, 0.1);
+  /* padding: 10px; */
+  border-radius: 10px;
+
+  box-shadow: 0 12px 14px 2px rgba(15, 2, 2, 0.1);
+}
+/* .step-content {
+  width: 800px;
+} */
+.step-name {
+  color: aqua;
+}
+/* .timeline-stepper {
+  margin-top: 30px;
+} */
+
+.timeline-content {
+  margin-left: 16px;
+}
+
+.skill-badge {
+  display: inline-block;
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 4px 6px 0 0;
+}
+
+.skills-box {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
