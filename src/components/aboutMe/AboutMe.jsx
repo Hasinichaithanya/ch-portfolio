@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import { Card, Box, Container, Typography } from "@mui/material";
+import { Card, Box, Button, Typography } from "@mui/material";
 import * as motion from "motion/react-client";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
@@ -26,13 +26,21 @@ const AboutMe = () => {
         >
           Chaithanya Hasini Doopati
         </Typography>
-        <Typography>
+        <Typography variant="h5" component="h6" textAlign="left">
           I am a CSE graduate, Content creator and a passionate software
           developer. I have knowledge in various programming languages with
           hands-on experience. Interested to learn new technologies and apply
           them in real-world projects. I am a quick learner and a team player,
           always eager to take on new challenges.
         </Typography>
+        <Button
+          href="/resume.pdf"
+          target="_blank"
+          variant="contained"
+          className="marginTop"
+        >
+          My Resume
+        </Button>
       </Box>
       <DotLottieReact
         src="https://lottie.host/3ea4c80b-6575-47b3-932b-3b7039288c46/EpYNGr9mi7.lottie"

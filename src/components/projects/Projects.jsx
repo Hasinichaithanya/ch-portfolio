@@ -11,7 +11,7 @@ const projects = [
     name: "Chef Freelancing Platform",
     image: "/chef-freelance.png",
     description:
-      "This is a platform for chefs to find freelance work. Chefs can create profiles, showcase their skills, and connect with potential clients.",
+      "This is a platform for chefs to find freelance work. Chefs can create profiles, showcase their skills and experience, and users can connect with the chefs based on the availability and food items.",
     tech: ["React", "Node.js", "MongoDB", "Express.js", "MUI", "bcrypt"],
   },
   {
@@ -45,21 +45,22 @@ const Projects = () => {
     slidesToShow: 3,
     infinite: true,
     slidesToScroll: 1,
+    lazyLoad: true,
     responsive: [
       {
-        breakpoint: 1100,
+        breakpoint: 1034,
         settings: {
           slidesToShow: 2,
-          // centerMode: true,
-          centerPadding: "30px",
+          slidesToScroll: 1,
+          centerMode: false,
         },
       },
       {
         breakpoint: 768,
         settings: {
+          centerMode: false,
           slidesToShow: 1,
-          // centerMode: false, // DISABLE center mode for mobile
-          // centerPadding: "0px",
+          slidesToScroll: 1,
         },
       },
     ],
@@ -89,7 +90,7 @@ const Projects = () => {
             <Typography variant="body2" className="desc">
               {project.description}
             </Typography>
-            <Box marginTop="10px">
+            <Box marginTop="5px">
               {project.tech.map((tech, techIndex) => (
                 <span key={techIndex} className="tech-skill">
                   {tech}

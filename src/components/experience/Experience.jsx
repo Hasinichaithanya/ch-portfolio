@@ -52,7 +52,7 @@ const Experience = () => {
       transition={{ duration: 1 }}
       whileInView={{ opacity: 1 }}
       viewport={{ amount: 0.2 }}
-      className="marginTop aboutme skills-container experience-container"
+      className="marginTop aboutme skills-container"
     >
       <Heading heading="Experience" />
 

@@ -34,7 +34,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="fixed" style={{ backgroundColor: "#0a7882" }}>
+    <AppBar position="fixed" style={{ backgroundColor: "#034d54" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
