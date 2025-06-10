@@ -12,7 +12,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-// import styles from "./header.css";
+import "./header.css";
 const pages = [
   { label: "About me", href: "#about" },
   { label: "Education", href: "#education" },
@@ -34,21 +34,17 @@ function Header() {
   };
 
   return (
-    <AppBar position="fixed" style={{ backgroundColor: "#034d54" }}>
+    <AppBar position="fixed" id="header-nav">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
-            // noWrap
-            // wrap={true}
             component="a"
             href="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              // fontFamily: "monospace",
               fontWeight: 700,
-              // letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
@@ -84,14 +80,14 @@ function Header() {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem
-                  key={page.label}
-                  onClick={handleCloseNavMenu}
-                  href={page.href}
-                >
-                  <Typography sx={{ textAlign: "center" }}>
+                <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+                  <Button
+                    sx={{ textAlign: "center" }}
+                    href={page.href}
+                    color="pink"
+                  >
                     {page.label}
-                  </Typography>
+                  </Button>
                 </MenuItem>
               ))}
             </Menu>
@@ -105,9 +101,9 @@ function Header() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              flexShrink: 1,
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              // letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}

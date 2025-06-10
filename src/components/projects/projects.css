@@ -8,12 +8,10 @@
 .project-card {
   background-color: rgba(21, 198, 247, 0.1);
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
   margin: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 400px;
-  width: 300px !important;
-  max-height: 100% !important;
+  padding-top: 10px;
 }
 .project-image {
   width: 100%;
@@ -49,7 +47,7 @@
 
 @media (max-width: 470px) {
   .project-card {
-    height: 440px;
+    /* height: 440px; */
     width: 270px !important;
   }
 }
@@ -68,4 +66,26 @@
   .tech-skill {
     font-size: 12px !important;
   }
+}
+@media (min-width: 500px) {
+  .project-card {
+    height: 480px !important;
+    width: 300px !important;
+    max-height: 100% !important;
+  }
+}
+.dialog-box {
+  border-radius: 12px;
+}
+.dialog-content {
+  background-color: #06667b;
+}
+#responsive-dialog-title {
+  color: #fff;
+}
+#project-btn {
+  color: #0d2d35;
+  background-color: #fff;
+  width: 130px;
+  margin: 10px;
 }
