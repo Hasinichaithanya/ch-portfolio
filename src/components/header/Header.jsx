@@ -10,7 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import "/src/components/header/header.css";
 const pages = [
   { label: "About me", href: "#about" },
   { label: "Education", href: "#education" },
@@ -20,6 +19,12 @@ const pages = [
   // { label: "Contact", href: "#contact" },
   // { label: "Achievements", href: "#achievements" },
 ];
+const headerStyles = {
+  background:
+    "radial-gradient(circle at center, rgba(223, 5, 5, 0.2), rgba(43, 226, 220, 0.6) 30%, rgba(5, 5, 39, 0.8) 70%)",
+  backgroundSize: "cover, 20px 20px",
+  backgroundRepeat: "no-repeat, repeat",
+};
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -32,7 +37,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="fixed" id="header-nav">
+    <AppBar position="fixed" id="header-nav" style={headerStyles}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
