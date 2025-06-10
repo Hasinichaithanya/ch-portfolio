@@ -12,7 +12,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import "./header.css";
+import "../header/header.css";
 const pages = [
   { label: "About me", href: "#about" },
   { label: "Education", href: "#education" },

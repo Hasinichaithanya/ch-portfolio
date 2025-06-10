@@ -69,7 +69,7 @@ const Experience = () => {
                 <Typography variant="h6" className="step-name">
                   {step.name}
                 </Typography>
-                <Typography variant="body2" color="primary">
+                <Typography variant="body2" color="warning">
                   {step.company} • {step.duration}
                 </Typography>
               </StepLabel>

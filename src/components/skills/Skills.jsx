@@ -121,7 +121,7 @@ const Skills = () => {
             className="skill-card"
           >
             <img src={skill.image} className="card-image" />
-            <Typography>{skill.name}</Typography>
+            <Typography id="skill-name">{skill.name}</Typography>
           </motion.div>
         ))}
       </Slider>

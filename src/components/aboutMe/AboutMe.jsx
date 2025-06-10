@@ -30,22 +30,18 @@ const AboutMe = () => {
           them in real-world projects. I am a quick learner and a team player,
           always eager to take on new challenges.
         </Typography>
-        <button
-          href="/resume.pdf"
-          target="_blank"
-          variant="contained"
-          className="marginTop resume-button"
-        >
-          My Resume <DownloadIcon />
-        </button>
+        <Box textAlign="left">
+          <Button
+            href="/resume.pdf"
+            target="_blank"
+            variant="contained"
+            className="marginTop resume-button"
+          >
+            My Resume <DownloadIcon />
+          </Button>
+        </Box>
       </Box>
       <motion.div
-        // transition={{
-        //   duration: 0.4,
-        //   ease: "easeInOut",
-        //   bounce: 0.25,
-        //   type: "spring",
-        // }}
         animate={{
           scale: [0.9, 1, 0.9],
           borderRadius: ["0%", "0%", "50%", "50%", "0%"],
