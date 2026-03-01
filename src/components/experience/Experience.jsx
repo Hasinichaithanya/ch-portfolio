@@ -18,8 +18,8 @@ const experience = [
     duration: "June 2025 - Present",
     skills: ["Angular", "Node.js", "Express.js", "MongoDB"],
     description:
-      "Eager to contribute to the development of web applications and enhance user experiences through my skills in Angular and Node.js.",
-  },
+      "Full-stack engineer focused on scalable backend architecture and modern web development. I build secure REST APIs, modular server systems, and responsive applications across web and mobile platforms."
+      },
   {
     name: "Web Developer Intern",
     company: "Inventivebay Technologies",
