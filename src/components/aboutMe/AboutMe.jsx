@@ -30,7 +30,7 @@ const AboutMe = () => {
           them in real-world projects. I am a quick learner and a team player,
           always eager to take on new challenges.
         </Typography>
-        <Box textAlign="left">
+        {/* <Box textAlign="left">
           <Button
             href="/resume.pdf"
             target="_blank"
@@ -39,7 +39,7 @@ const AboutMe = () => {
           >
             My Resume <DownloadIcon />
           </Button>
-        </Box>
+        </Box> */}
       </Box>
       <motion.div
         animate={{
